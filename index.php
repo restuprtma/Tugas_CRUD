@@ -71,9 +71,10 @@
             <?php
                     include 'fungsi.php';
                     $students = getStudents(); // Memanggil fungsi untuk mendapatkan data mahasiswa
+                    $no = 1;
                     foreach ($students as $mahasiswa) {
                         echo "<tr>
-                                <td>{$mahasiswa['ID_Siswa']}</td>
+                                <td>{$no}</td>
                                 <td>{$mahasiswa['NIM']}</td>
                                 <td>{$mahasiswa['Nama_Siswa']}</td>
                                 <td>{$mahasiswa['Alpha']}</td>
