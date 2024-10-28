@@ -3,34 +3,34 @@ include 'fungsi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $action = $_POST['action'];
+    
+    // Validasi data dari form
+    $nim = $_POST['nim'] ?? null;
+    $nama = $_POST['nama'] ?? null;
+    $alpha = $_POST['alpha'] ?? 0;
+    $izin = $_POST['izin'] ?? 0;
+    $sakit = $_POST['sakit'] ?? 0;
 
     switch ($action) {
         case 'add':
-            // Data dummy untuk testing, bisa disesuaikan sesuai input sebenarnya
-            $nim = '12345';
-            $name = 'John Doe';
-            $alpha = 0;
-            $izin = 0;
-            $sakit = 0;
-            addStudent($nim, $name, $alpha, $izin, $sakit);
+            if ($nim && $nama) { // Pastikan NIM dan Name ada untuk Add
+                addStudent($nim, $nama, $alpha, $izin, $sakit);
+            }
             break;
 
         case 'update':
-            // Data dummy untuk testing, bisa disesuaikan sesuai input sebenarnya
-            $nim = '12345';
-            $alpha = 1;
-            $izin = 0;
-            $sakit = 0;
-            updateStudent($nim, $alpha, $izin, $sakit);
+            if ($nim) { // Pastikan NIM ada untuk Update
+                updateStudent($nim, $alpha, $izin, $sakit);
+            }
             break;
 
         case 'delete':
-            // Data dummy untuk testing, bisa disesuaikan sesuai input sebenarnya
-            $nim = '12345';
-            deleteStudent($nim);
+            if ($nim) { // Pastikan NIM ada untuk Delete
+                deleteStudent($nim);
+            }
             break;
     }
-    header("Location: index.html"); // Redirect kembali ke halaman utama
+    header("Location: index.php"); // Redirect kembali ke halaman utama
     exit();
 }
 ?>
