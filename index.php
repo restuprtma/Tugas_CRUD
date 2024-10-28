@@ -83,6 +83,7 @@
                                 <td><button type='button' class='update-button' onclick='showUpdateForm(" . json_encode($mahasiswa) . ")'>Update</button></td>
                                 <td> <button type='button' class='delete-button' onclick='showDeleteConfirmation(\"{$mahasiswa['NIM']}\")'>Delete</button><td>
                               </tr>";
+                        $no++;
                     }
                 ?>
 
