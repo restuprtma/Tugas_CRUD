@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abseni Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="table-container">
+    <h2 class="title">Absensi Mahasiswa</h2>
+        <!-- Tabel -->
+        <table>
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Alpha</th>
+                    <th>Izin</th>
+                    <th>Sakit</th>
+                </tr>
+            </thead>
+
+            <!-- iki mau takon gpt -->
+            <!-- <tbody>
+                <?php
+                    include 'fungsi.php';
+                    $students = getStudents(); // Memanggil fungsi untuk mendapatkan data mahasiswa
+                    foreach ($students as $student) {
+                        echo "<tr>
+                                <td>{$student['NIM']}</td>
+                                <td>{$student['Name']}</td>
+                                <td>{$student['Alpha']}</td>
+                                <td>{$student['Izin']}</td>
+                                <td>{$student['Sakit']}</td>
+                              </tr>";
+                    }
+                ?>
+            </tbody> -->
+        </table>
+
+        <!-- Tombol CRUD -->
+        <div class="button-container">
+            <button type="button" class="add-button">Tambah</button>
+            <button type="button" class="update-button">Update</button>
+            <button type="button" class="delete-button">Delete</button>
+        </div>
+    </div>
+
+</body>
+</html>
